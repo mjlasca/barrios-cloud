@@ -1,0 +1,22 @@
+uuid: d42b06e1-0e10-4d54-956b-a6445408764a
+langcode: es
+status: true
+dependencies:
+  theme:
+    - olivero
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: olivero_primary_local_tasks
+theme: olivero
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

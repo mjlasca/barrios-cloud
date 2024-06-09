@@ -1,0 +1,11 @@
+uuid: 049f134f-666c-4f70-b7d9-7ad57dd002df
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.proposals
+id: node.proposals
+target_entity_type_id: node
+target_bundle: proposals
+default_langcode: site_default
+language_alterable: false
