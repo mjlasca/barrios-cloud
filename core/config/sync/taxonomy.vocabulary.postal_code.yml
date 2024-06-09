@@ -1,0 +1,8 @@
+uuid: 00236278-3d0b-4a24-86b4-bdb9b7f79c21
+langcode: es
+status: true
+dependencies: {  }
+name: 'Código postal'
+vid: postal_code
+description: 'Categorización del código postal'
+weight: 0

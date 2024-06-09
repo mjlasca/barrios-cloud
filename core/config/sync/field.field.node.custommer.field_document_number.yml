@@ -1,0 +1,23 @@
+uuid: b5988f7d-38cd-4135-b642-2aad0e0c6ae8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_number
+    - node.type.custommer
+id: node.custommer.field_document_number
+field_name: field_document_number
+entity_type: node
+bundle: custommer
+label: 'Número de documento'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

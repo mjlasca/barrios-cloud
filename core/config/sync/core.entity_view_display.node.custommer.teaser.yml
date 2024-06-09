@@ -1,0 +1,41 @@
+uuid: bf76f02e-b189-4edf-b389-268ba0898da4
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.custommer.field_address
+    - field.field.node.custommer.field_birth_date
+    - field.field.node.custommer.field_document_number
+    - field.field.node.custommer.field_document_type
+    - field.field.node.custommer.field_lastname
+    - field.field.node.custommer.field_mail
+    - field.field.node.custommer.field_name
+    - field.field.node.custommer.field_phone
+    - field.field.node.custommer.field_postal_code
+    - field.field.node.custommer.field_sex
+    - node.type.custommer
+  module:
+    - user
+id: node.custommer.teaser
+targetEntityType: node
+bundle: custommer
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_birth_date: true
+  field_document_number: true
+  field_document_type: true
+  field_lastname: true
+  field_mail: true
+  field_name: true
+  field_phone: true
+  field_postal_code: true
+  field_sex: true
+  langcode: true

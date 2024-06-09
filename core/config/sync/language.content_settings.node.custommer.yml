@@ -1,0 +1,11 @@
+uuid: 10f45a86-585f-415e-862d-c588a8e88a8e
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.custommer
+id: node.custommer
+target_entity_type_id: node
+target_bundle: custommer
+default_langcode: site_default
+language_alterable: false

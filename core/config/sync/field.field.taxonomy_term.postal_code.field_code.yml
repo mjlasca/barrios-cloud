@@ -1,0 +1,23 @@
+uuid: a169c280-9a69-4069-ad4f-591776390f95
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_code
+    - taxonomy.vocabulary.postal_code
+id: taxonomy_term.postal_code.field_code
+field_name: field_code
+entity_type: taxonomy_term
+bundle: postal_code
+label: code
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 4
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

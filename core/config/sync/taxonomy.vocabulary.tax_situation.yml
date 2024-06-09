@@ -1,0 +1,8 @@
+uuid: 8c78eb8d-cae6-411a-ac59-00c30eec7fa8
+langcode: es
+status: true
+dependencies: {  }
+name: 'Situación impositiva'
+vid: tax_situation
+description: 'Items relacionados con situación impositiva'
+weight: 0

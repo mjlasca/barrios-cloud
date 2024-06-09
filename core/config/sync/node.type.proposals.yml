@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Propuestas
 type: proposals
-description: ''
+description: 'Registro de propuestas con las pólizas de un cliente'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -1,0 +1,8 @@
+uuid: 4f042a91-4dc7-428d-8fb3-3e471f288fce
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipo de documento'
+vid: document_type
+description: 'Categorización del tipo de contenido'
+weight: 0

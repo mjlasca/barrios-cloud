@@ -1,0 +1,17 @@
+uuid: 1cd8d7c3-aeb2-4e05-8fdf-ad9dfe5d8b93
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Cliente
+type: custommer
+description: 'Tipo de contenido con información de los clientes'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
