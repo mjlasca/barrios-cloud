@@ -1,17 +1,16 @@
-uuid: 4c854526-cc92-4650-87de-f2666318cbbc
+uuid: fb1e0dc4-6237-4bea-95a6-b8a62ed63c1d
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.node.proposals.field_custommer
-    - field.field.node.proposals.field_proposals_lines
-    - node.type.proposals
+    - field.field.node.classification.field_activity
+    - field.field.node.classification.field_code
+    - node.type.classification
   module:
-    - paragraphs
     - path
-id: node.proposals.default
+id: node.classification.default
 targetEntityType: node
-bundle: proposals
+bundle: classification
 mode: default
 content:
   created:
@@ -20,9 +19,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_custommer:
+  field_activity:
     type: entity_reference_autocomplete
-    weight: 122
+    weight: 125
     region: content
     settings:
       match_operator: CONTAINS
@@ -30,23 +29,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_proposals_lines:
-    type: paragraphs
-    weight: 121
+  field_code:
+    type: number
+    weight: 124
     region: content
     settings:
-      title: Párrafo
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

@@ -1,0 +1,29 @@
+uuid: e5cbb8e4-35d3-493d-908c-3c3e6158b507
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_classification
+    - node.type.classification
+    - paragraphs.paragraphs_type.proposals_lines
+id: paragraph.proposals_lines.field_classification
+field_name: field_classification
+entity_type: paragraph
+bundle: proposals_lines
+label: Clasificación
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      classification: classification
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

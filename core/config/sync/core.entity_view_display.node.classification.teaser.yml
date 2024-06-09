@@ -1,17 +1,17 @@
-uuid: b919ff63-736d-4c61-93ad-6fec07a45655
+uuid: 088c1b5c-b8fe-460b-a2e6-b5694a755eb0
 langcode: es
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.proposals.field_custommer
-    - field.field.node.proposals.field_proposals_lines
-    - node.type.proposals
+    - field.field.node.classification.field_activity
+    - field.field.node.classification.field_code
+    - node.type.classification
   module:
     - user
-id: node.proposals.teaser
+id: node.classification.teaser
 targetEntityType: node
-bundle: proposals
+bundle: classification
 mode: teaser
 content:
   links:
@@ -20,6 +20,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_custommer: true
-  field_proposals_lines: true
+  field_activity: true
+  field_code: true
   langcode: true

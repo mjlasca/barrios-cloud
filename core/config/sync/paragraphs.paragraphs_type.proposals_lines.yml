@@ -1,0 +1,10 @@
+uuid: f8b18e8e-37a1-4f18-a431-5f464e4d6e56
+langcode: es
+status: true
+dependencies: {  }
+id: proposals_lines
+label: 'Líneas propuestas'
+icon_uuid: null
+icon_default: null
+description: 'Tipo de paragraph para registrar las pólizas de las propuestas'
+behavior_plugins: {  }

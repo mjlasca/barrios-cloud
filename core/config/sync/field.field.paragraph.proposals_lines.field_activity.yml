@@ -1,0 +1,29 @@
+uuid: 5523c69a-0349-46e7-9b91-027725f3af0d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_activity
+    - node.type.activity
+    - paragraphs.paragraphs_type.proposals_lines
+id: paragraph.proposals_lines.field_activity
+field_name: field_activity
+entity_type: paragraph
+bundle: proposals_lines
+label: Actividad
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      activity: activity
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

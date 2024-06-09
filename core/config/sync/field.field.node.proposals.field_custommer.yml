@@ -1,0 +1,29 @@
+uuid: 6439099b-b369-4ab2-890f-6980bcb281ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custommer
+    - node.type.custommer
+    - node.type.proposals
+id: node.proposals.field_custommer
+field_name: field_custommer
+entity_type: node
+bundle: proposals
+label: Cliente
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      custommer: custommer
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

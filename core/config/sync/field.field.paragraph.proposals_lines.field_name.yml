@@ -1,0 +1,19 @@
+uuid: 4ae0f894-0d19-4a92-91e5-c5f813c6b35a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - paragraphs.paragraphs_type.proposals_lines
+id: paragraph.proposals_lines.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: proposals_lines
+label: Nombres
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

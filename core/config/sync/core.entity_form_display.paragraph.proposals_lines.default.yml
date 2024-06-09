@@ -1,0 +1,82 @@
+uuid: 09e7b0a5-4806-48a0-a334-0511cb0599bd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.proposals_lines.field_activity
+    - field.field.paragraph.proposals_lines.field_birth_date
+    - field.field.paragraph.proposals_lines.field_classification
+    - field.field.paragraph.proposals_lines.field_document_number
+    - field.field.paragraph.proposals_lines.field_document_type
+    - field.field.paragraph.proposals_lines.field_lastname
+    - field.field.paragraph.proposals_lines.field_name
+    - paragraphs.paragraphs_type.proposals_lines
+  module:
+    - datetime
+id: paragraph.proposals_lines.default
+targetEntityType: paragraph
+bundle: proposals_lines
+mode: default
+content:
+  field_activity:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_birth_date:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_classification:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_document_number:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_document_type:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_lastname:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

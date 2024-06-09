@@ -1,14 +1,15 @@
-uuid: 0ae79f55-431c-4cf0-aeb6-33495c2a0250
+uuid: 7a41101c-247c-4008-a635-02704f93cf99
 langcode: es
 status: true
 dependencies:
   module:
     - node
-id: node.field_single
-field_name: field_single
+id: node.field_custommer
+field_name: field_custommer
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: node
 module: core
 locked: false
 cardinality: 1

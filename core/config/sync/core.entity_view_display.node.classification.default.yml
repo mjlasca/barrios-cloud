@@ -1,35 +1,34 @@
-uuid: 7ef660e1-2f17-4e5d-b1fa-24ceb6917309
+uuid: 095789c8-c36c-48de-9981-c1fa2f570e64
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.node.proposals.field_custommer
-    - field.field.node.proposals.field_proposals_lines
-    - node.type.proposals
+    - field.field.node.classification.field_activity
+    - field.field.node.classification.field_code
+    - node.type.classification
   module:
-    - entity_reference_revisions
     - user
-id: node.proposals.default
+id: node.classification.default
 targetEntityType: node
-bundle: proposals
+bundle: classification
 mode: default
 content:
-  field_custommer:
+  field_activity:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 102
+    weight: 105
     region: content
-  field_proposals_lines:
-    type: entity_reference_revisions_entity_view
+  field_code:
+    type: number_integer
     label: above
     settings:
-      view_mode: default
-      link: ''
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    weight: 101
+    weight: 104
     region: content
   links:
     settings: {  }

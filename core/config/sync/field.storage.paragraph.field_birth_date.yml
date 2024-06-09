@@ -1,0 +1,20 @@
+uuid: a27c051d-2857-4408-8717-e909253be28c
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_birth_date
+field_name: field_birth_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
