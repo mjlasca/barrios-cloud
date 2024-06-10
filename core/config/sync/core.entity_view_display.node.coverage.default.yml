@@ -1,0 +1,42 @@
+uuid: 0802d245-2db3-494d-b381-af9b949c173f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.coverage.field_code
+    - field.field.node.coverage.field_sum
+    - node.type.coverage
+  module:
+    - user
+id: node.coverage.default
+targetEntityType: node
+bundle: coverage
+mode: default
+content:
+  field_code:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_sum:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

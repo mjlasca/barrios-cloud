@@ -1,0 +1,27 @@
+uuid: cfdd0932-04ea-4242-8203-c7e5737a2ac2
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_payment_type
+field_name: field_payment_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: contado
+      label: CONTADO
+    -
+      value: credito
+      label: CRÉDITO
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

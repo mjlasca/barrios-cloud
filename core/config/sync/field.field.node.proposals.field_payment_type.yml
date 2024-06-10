@@ -1,0 +1,21 @@
+uuid: 218fd748-7183-445e-bdf5-3b53db09df0d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_payment_type
+    - node.type.proposals
+  module:
+    - options
+id: node.proposals.field_payment_type
+field_name: field_payment_type
+entity_type: node
+bundle: proposals
+label: 'Tipo de pago'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

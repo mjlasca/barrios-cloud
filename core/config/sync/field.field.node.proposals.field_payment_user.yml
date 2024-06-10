@@ -1,29 +1,29 @@
-uuid: 6439099b-b369-4ab2-890f-6980bcb281ba
+uuid: f9ec6a47-6132-469f-9221-f05ac308dceb
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_custommer
-    - node.type.custommer
+    - field.storage.node.field_payment_user
     - node.type.proposals
-id: node.proposals.field_custommer
-field_name: field_custommer
+id: node.proposals.field_payment_user
+field_name: field_payment_user
 entity_type: node
 bundle: proposals
-label: Tomador
+label: 'Usuario paga'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:user'
   handler_settings:
-    target_bundles:
-      custommer: custommer
+    target_bundles: null
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    filter:
+      type: _none
+    include_anonymous: false
 field_type: entity_reference

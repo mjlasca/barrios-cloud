@@ -1,0 +1,18 @@
+uuid: a0cad585-f4d5-4b38-930d-85e95a92d030
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Cobertura
+type: coverage
+description: 'Tipo de contenido para registrar los valores de coberturas'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

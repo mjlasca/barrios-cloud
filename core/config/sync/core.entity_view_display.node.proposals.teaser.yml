@@ -4,8 +4,18 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.proposals.field_covarage
     - field.field.node.proposals.field_custommer
+    - field.field.node.proposals.field_months
+    - field.field.node.proposals.field_pay
+    - field.field.node.proposals.field_payment_date
+    - field.field.node.proposals.field_payment_type
+    - field.field.node.proposals.field_payment_user
     - field.field.node.proposals.field_proposals_lines
+    - field.field.node.proposals.field_reference
+    - field.field.node.proposals.field_tax_situation
+    - field.field.node.proposals.field_valid_since
+    - field.field.node.proposals.field_validity_until
     - node.type.proposals
   module:
     - user
@@ -20,6 +30,16 @@ content:
     weight: 100
     region: content
 hidden:
+  field_covarage: true
   field_custommer: true
+  field_months: true
+  field_pay: true
+  field_payment_date: true
+  field_payment_type: true
+  field_payment_user: true
   field_proposals_lines: true
+  field_reference: true
+  field_tax_situation: true
+  field_valid_since: true
+  field_validity_until: true
   langcode: true

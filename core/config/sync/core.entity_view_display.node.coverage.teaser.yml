@@ -1,0 +1,25 @@
+uuid: 79897866-b24e-47d5-96fc-809898b140ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.coverage.field_code
+    - field.field.node.coverage.field_sum
+    - node.type.coverage
+  module:
+    - user
+id: node.coverage.teaser
+targetEntityType: node
+bundle: coverage
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_code: true
+  field_sum: true
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: 9882430e-5c5a-42d2-82c6-4e92ab0e762b
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_covarage
+field_name: field_covarage
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 64d83876-5e7a-47af-8eb3-c71e58914a44
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_tax_situation
+field_name: field_tax_situation
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

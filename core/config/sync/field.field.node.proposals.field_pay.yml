@@ -1,0 +1,23 @@
+uuid: 355b8606-3f87-4395-99b9-91a3acb30060
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pay
+    - node.type.proposals
+id: node.proposals.field_pay
+field_name: field_pay
+entity_type: node
+bundle: proposals
+label: Paga
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

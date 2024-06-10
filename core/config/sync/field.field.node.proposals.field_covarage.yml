@@ -1,16 +1,16 @@
-uuid: 6439099b-b369-4ab2-890f-6980bcb281ba
+uuid: 3e055d3a-4abb-41e9-954b-9ccbff846119
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_custommer
-    - node.type.custommer
+    - field.storage.node.field_covarage
+    - node.type.coverage
     - node.type.proposals
-id: node.proposals.field_custommer
-field_name: field_custommer
+id: node.proposals.field_covarage
+field_name: field_covarage
 entity_type: node
 bundle: proposals
-label: Tomador
+label: Cobertura
 description: ''
 required: true
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      custommer: custommer
+      coverage: coverage
     sort:
       field: _none
       direction: ASC

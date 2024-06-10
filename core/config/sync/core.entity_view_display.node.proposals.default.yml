@@ -3,17 +3,37 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.node.proposals.field_covarage
     - field.field.node.proposals.field_custommer
+    - field.field.node.proposals.field_months
+    - field.field.node.proposals.field_pay
+    - field.field.node.proposals.field_payment_date
+    - field.field.node.proposals.field_payment_type
+    - field.field.node.proposals.field_payment_user
     - field.field.node.proposals.field_proposals_lines
+    - field.field.node.proposals.field_reference
+    - field.field.node.proposals.field_tax_situation
+    - field.field.node.proposals.field_valid_since
+    - field.field.node.proposals.field_validity_until
     - node.type.proposals
   module:
+    - datetime
     - entity_reference_revisions
+    - options
     - user
 id: node.proposals.default
 targetEntityType: node
 bundle: proposals
 mode: default
 content:
+  field_covarage:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
   field_custommer:
     type: entity_reference_label
     label: above
@@ -21,6 +41,47 @@ content:
       link: true
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_months:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_pay:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_payment_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_payment_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_payment_user:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
     region: content
   field_proposals_lines:
     type: entity_reference_revisions_entity_view
@@ -30,6 +91,40 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_reference:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_tax_situation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_valid_since:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_validity_until:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 105
     region: content
   links:
     settings: {  }

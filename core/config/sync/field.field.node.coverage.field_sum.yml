@@ -1,0 +1,23 @@
+uuid: 1b033138-763a-44ae-8435-81af7aaf4cb7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sum
+    - node.type.coverage
+id: node.coverage.field_sum
+field_name: field_sum
+entity_type: node
+bundle: coverage
+label: Suma
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

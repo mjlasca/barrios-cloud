@@ -1,0 +1,29 @@
+uuid: 6cb4c7e9-b525-43cb-a239-9e71e4e8c773
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tax_situation
+    - node.type.proposals
+    - taxonomy.vocabulary.tax_situation
+id: node.proposals.field_tax_situation
+field_name: field_tax_situation
+entity_type: node
+bundle: proposals
+label: 'Situación impositiva'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tax_situation: tax_situation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
