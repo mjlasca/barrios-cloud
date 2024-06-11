@@ -1,0 +1,7 @@
+name: 'Core barrios-cloud'
+type: module
+description: 'Module core barrios-cloud'
+package: Barrios
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node
