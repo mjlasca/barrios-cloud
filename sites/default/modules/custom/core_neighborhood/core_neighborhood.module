@@ -5,15 +5,4 @@
  */
 function core_neighborhood_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   
-  /*if ($form_id == 'user_login_form') {
-    // Agrega un campo de texto personalizado al formulario de inicio de sesión.
-    $form['custom_field'] = [
-      '#type' => 'textfield',
-      '#title' => t('Custom Field'),
-      '#required' => TRUE,
-    ];
-
-    // Agrega una clase CSS personalizada al formulario.
-    $form['#attributes']['class'][] = 'custom-login-form';
-  }*/
 }
