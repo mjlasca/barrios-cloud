@@ -1,0 +1,25 @@
+uuid: 6461ad76-1b7d-446f-84e3-9cdbc309e2a8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deductible_coverage
+    - node.type.proposals
+id: node.proposals.field_deductible_coverage
+field_name: field_deductible_coverage
+entity_type: node
+bundle: proposals
+label: 'Cobertura deducible'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

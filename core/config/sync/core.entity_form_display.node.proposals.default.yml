@@ -5,14 +5,25 @@ dependencies:
   config:
     - field.field.node.proposals.field_covarage
     - field.field.node.proposals.field_custommer
+    - field.field.node.proposals.field_debit_note
+    - field.field.node.proposals.field_deductible_coverage
+    - field.field.node.proposals.field_expense_coverage
+    - field.field.node.proposals.field_master
     - field.field.node.proposals.field_months
+    - field.field.node.proposals.field_neighborhood
+    - field.field.node.proposals.field_organizer
     - field.field.node.proposals.field_pay
     - field.field.node.proposals.field_payment_date
     - field.field.node.proposals.field_payment_type
     - field.field.node.proposals.field_payment_user
+    - field.field.node.proposals.field_prima
+    - field.field.node.proposals.field_prize
+    - field.field.node.proposals.field_producer
     - field.field.node.proposals.field_proposals_lines
     - field.field.node.proposals.field_reference
+    - field.field.node.proposals.field_sum_coverage
     - field.field.node.proposals.field_tax_situation
+    - field.field.node.proposals.field_total_prize
     - field.field.node.proposals.field_valid_since
     - field.field.node.proposals.field_validity_until
     - node.type.proposals
@@ -51,11 +62,58 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_debit_note:
+    type: number
+    weight: 131
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_deductible_coverage:
+    type: number
+    weight: 125
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_expense_coverage:
+    type: number
+    weight: 126
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_master:
+    type: string_textfield
+    weight: 128
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_months:
     type: options_select
     weight: 29
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_neighborhood:
+    type: entity_reference_autocomplete
+    weight: 121
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_organizer:
+    type: string_textfield
+    weight: 129
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_pay:
     type: boolean_checkbox
@@ -86,6 +144,28 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_prima:
+    type: number
+    weight: 127
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_prize:
+    type: number
+    weight: 122
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_producer:
+    type: string_textfield
+    weight: 130
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_proposals_lines:
     type: paragraphs
     weight: 8
@@ -112,6 +192,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_sum_coverage:
+    type: number
+    weight: 124
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_tax_situation:
     type: entity_reference_autocomplete
     weight: 26
@@ -120,6 +207,13 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_total_prize:
+    type: number
+    weight: 123
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_valid_since:

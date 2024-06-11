@@ -1,0 +1,23 @@
+uuid: ba8413c1-50c7-4439-b33c-5ee1ddd4a6ee
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prize
+    - node.type.proposals
+id: node.proposals.field_prize
+field_name: field_prize
+entity_type: node
+bundle: proposals
+label: Premio
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

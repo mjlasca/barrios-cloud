@@ -1,0 +1,23 @@
+uuid: 9a3162cc-3ff6-4ca4-8a4e-a9fee32a4fa2
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.neighborhood_groups.field_neighborhood
+    - node.type.neighborhood_groups
+  module:
+    - user
+id: node.neighborhood_groups.teaser
+targetEntityType: node
+bundle: neighborhood_groups
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_neighborhood: true
+  langcode: true

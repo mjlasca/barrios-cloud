@@ -1,0 +1,29 @@
+uuid: f91ed2ca-f1ee-4c38-8369-0a35c9276acc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_neighborhood
+    - node.type.neighborhood
+    - node.type.neighborhood_groups
+id: node.neighborhood_groups.field_neighborhood
+field_name: field_neighborhood
+entity_type: node
+bundle: neighborhood_groups
+label: Barrio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      neighborhood: neighborhood
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 89374089-046c-43b2-a25d-46770bafe9c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prima
+    - node.type.proposals
+id: node.proposals.field_prima
+field_name: field_prima
+entity_type: node
+bundle: proposals
+label: Prima
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

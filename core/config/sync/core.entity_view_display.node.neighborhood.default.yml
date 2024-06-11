@@ -1,0 +1,29 @@
+uuid: 99779849-924f-4eae-9ad4-a4ee2768f8f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.neighborhood.field_name
+    - node.type.neighborhood
+  module:
+    - user
+id: node.neighborhood.default
+targetEntityType: node
+bundle: neighborhood
+mode: default
+content:
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

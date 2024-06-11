@@ -6,14 +6,25 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.proposals.field_covarage
     - field.field.node.proposals.field_custommer
+    - field.field.node.proposals.field_debit_note
+    - field.field.node.proposals.field_deductible_coverage
+    - field.field.node.proposals.field_expense_coverage
+    - field.field.node.proposals.field_master
     - field.field.node.proposals.field_months
+    - field.field.node.proposals.field_neighborhood
+    - field.field.node.proposals.field_organizer
     - field.field.node.proposals.field_pay
     - field.field.node.proposals.field_payment_date
     - field.field.node.proposals.field_payment_type
     - field.field.node.proposals.field_payment_user
+    - field.field.node.proposals.field_prima
+    - field.field.node.proposals.field_prize
+    - field.field.node.proposals.field_producer
     - field.field.node.proposals.field_proposals_lines
     - field.field.node.proposals.field_reference
+    - field.field.node.proposals.field_sum_coverage
     - field.field.node.proposals.field_tax_situation
+    - field.field.node.proposals.field_total_prize
     - field.field.node.proposals.field_valid_since
     - field.field.node.proposals.field_validity_until
     - node.type.proposals
@@ -32,14 +43,25 @@ content:
 hidden:
   field_covarage: true
   field_custommer: true
+  field_debit_note: true
+  field_deductible_coverage: true
+  field_expense_coverage: true
+  field_master: true
   field_months: true
+  field_neighborhood: true
+  field_organizer: true
   field_pay: true
   field_payment_date: true
   field_payment_type: true
   field_payment_user: true
+  field_prima: true
+  field_prize: true
+  field_producer: true
   field_proposals_lines: true
   field_reference: true
+  field_sum_coverage: true
   field_tax_situation: true
+  field_total_prize: true
   field_valid_since: true
   field_validity_until: true
   langcode: true

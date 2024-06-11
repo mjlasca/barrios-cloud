@@ -1,0 +1,29 @@
+uuid: f289a016-b161-40a1-be98-32c153fd11df
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.neighborhood_groups.field_neighborhood
+    - node.type.neighborhood_groups
+  module:
+    - user
+id: node.neighborhood_groups.default
+targetEntityType: node
+bundle: neighborhood_groups
+mode: default
+content:
+  field_neighborhood:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

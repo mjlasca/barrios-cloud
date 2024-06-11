@@ -1,0 +1,25 @@
+uuid: e7151c3d-b8ba-4271-96a7-c4df4ab0dbd8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expense_coverage
+    - node.type.proposals
+id: node.proposals.field_expense_coverage
+field_name: field_expense_coverage
+entity_type: node
+bundle: proposals
+label: 'Cobertura gastos'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

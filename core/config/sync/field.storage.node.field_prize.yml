@@ -1,0 +1,20 @@
+uuid: b2dae8f4-9765-45a0-96ee-3b812312f42c
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_prize
+field_name: field_prize
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

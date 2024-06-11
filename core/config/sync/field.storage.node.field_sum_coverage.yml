@@ -1,0 +1,20 @@
+uuid: ffc805ec-e3c9-4e60-9068-018677576399
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sum_coverage
+field_name: field_sum_coverage
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
