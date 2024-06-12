@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.node.proposals.field_company
     - field.field.node.proposals.field_covarage
     - field.field.node.proposals.field_custommer
     - field.field.node.proposals.field_debit_note
@@ -41,6 +42,16 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_company:
+    type: entity_reference_autocomplete
+    weight: 132
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_covarage:
     type: entity_reference_autocomplete

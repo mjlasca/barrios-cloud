@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.custommer.field_address
     - field.field.node.custommer.field_birth_date
+    - field.field.node.custommer.field_company
     - field.field.node.custommer.field_document_number
     - field.field.node.custommer.field_document_type
     - field.field.node.custommer.field_lastname
@@ -41,6 +42,16 @@ content:
     weight: 129
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_company:
+    type: entity_reference_autocomplete
+    weight: 132
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_document_number:
     type: number

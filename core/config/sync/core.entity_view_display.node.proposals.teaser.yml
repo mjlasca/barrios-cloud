@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.proposals.field_company
     - field.field.node.proposals.field_covarage
     - field.field.node.proposals.field_custommer
     - field.field.node.proposals.field_debit_note
@@ -41,6 +42,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_company: true
   field_covarage: true
   field_custommer: true
   field_debit_note: true

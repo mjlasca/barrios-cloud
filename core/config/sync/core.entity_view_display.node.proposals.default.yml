@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.node.proposals.field_company
     - field.field.node.proposals.field_covarage
     - field.field.node.proposals.field_custommer
     - field.field.node.proposals.field_debit_note
@@ -37,6 +38,14 @@ targetEntityType: node
 bundle: proposals
 mode: default
 content:
+  field_company:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 123
+    region: content
   field_covarage:
     type: entity_reference_label
     label: above

@@ -1,0 +1,19 @@
+uuid: d0efc439-4920-4fb5-864e-be6d5712850e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.company
+id: node.company.field_name
+field_name: field_name
+entity_type: node
+bundle: company
+label: 'Nombre empresa'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 7e1b5cc3-97c2-433d-b2fc-3d82c42d432a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.insurance_carrier
+id: node.insurance_carrier
+target_entity_type_id: node
+target_bundle: insurance_carrier
+default_langcode: site_default
+language_alterable: false

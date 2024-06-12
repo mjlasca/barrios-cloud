@@ -1,18 +1,17 @@
-uuid: 79897866-b24e-47d5-96fc-809898b140ac
+uuid: fe9bf55b-4741-4e39-aa1e-3e5e0a946545
 langcode: es
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.coverage.field_code
-    - field.field.node.coverage.field_company
-    - field.field.node.coverage.field_sum
-    - node.type.coverage
+    - field.field.node.insurance_carrier.field_company
+    - field.field.node.insurance_carrier.field_name
+    - node.type.insurance_carrier
   module:
     - user
-id: node.coverage.teaser
+id: node.insurance_carrier.teaser
 targetEntityType: node
-bundle: coverage
+bundle: insurance_carrier
 mode: teaser
 content:
   links:
@@ -21,7 +20,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_code: true
   field_company: true
-  field_sum: true
+  field_name: true
   langcode: true

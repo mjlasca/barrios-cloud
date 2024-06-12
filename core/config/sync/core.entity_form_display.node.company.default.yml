@@ -1,17 +1,16 @@
-uuid: bcfb892b-edb8-43e2-ad46-de66a8f50e96
+uuid: 58dc2c3f-c409-436c-ae86-00e921cc9c5b
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.node.coverage.field_code
-    - field.field.node.coverage.field_company
-    - field.field.node.coverage.field_sum
-    - node.type.coverage
+    - field.field.node.company.field_name
+    - field.field.node.company.field_user
+    - node.type.company
   module:
     - path
-id: node.coverage.default
+id: node.company.default
 targetEntityType: node
-bundle: coverage
+bundle: company
 mode: default
 content:
   created:
@@ -20,28 +19,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_code:
-    type: number
-    weight: 124
+  field_name:
+    type: string_textfield
+    weight: 122
     region: content
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_company:
+  field_user:
     type: entity_reference_autocomplete
-    weight: 132
+    weight: 123
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_sum:
-    type: number
-    weight: 121
-    region: content
-    settings:
       placeholder: ''
     third_party_settings: {  }
   langcode:

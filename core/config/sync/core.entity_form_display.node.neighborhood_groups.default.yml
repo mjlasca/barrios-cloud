@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.node.neighborhood_groups.field_company
     - field.field.node.neighborhood_groups.field_neighborhood
     - node.type.neighborhood_groups
   module:
@@ -17,6 +18,16 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_company:
+    type: entity_reference_autocomplete
+    weight: 132
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_neighborhood:
     type: entity_reference_autocomplete

@@ -1,0 +1,29 @@
+uuid: c0d8e238-261b-4de5-8238-a11c2eb35788
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company
+    - node.type.company
+    - node.type.coverage
+id: node.coverage.field_company
+field_name: field_company
+entity_type: node
+bundle: coverage
+label: Empresa
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      company: company
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

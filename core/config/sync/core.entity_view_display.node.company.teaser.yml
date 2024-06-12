@@ -1,0 +1,25 @@
+uuid: ba12a28b-5807-45cf-be1b-f4ef4c6d7112
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company.field_name
+    - field.field.node.company.field_user
+    - node.type.company
+  module:
+    - user
+id: node.company.teaser
+targetEntityType: node
+bundle: company
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_name: true
+  field_user: true
+  langcode: true

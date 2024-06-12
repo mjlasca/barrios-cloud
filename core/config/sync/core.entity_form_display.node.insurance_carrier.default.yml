@@ -1,17 +1,16 @@
-uuid: bcfb892b-edb8-43e2-ad46-de66a8f50e96
+uuid: d014b697-e729-4bcf-b193-fe3f6329ec74
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.node.coverage.field_code
-    - field.field.node.coverage.field_company
-    - field.field.node.coverage.field_sum
-    - node.type.coverage
+    - field.field.node.insurance_carrier.field_company
+    - field.field.node.insurance_carrier.field_name
+    - node.type.insurance_carrier
   module:
     - path
-id: node.coverage.default
+id: node.insurance_carrier.default
 targetEntityType: node
-bundle: coverage
+bundle: insurance_carrier
 mode: default
 content:
   created:
@@ -19,13 +18,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_code:
-    type: number
-    weight: 124
-    region: content
-    settings:
-      placeholder: ''
     third_party_settings: {  }
   field_company:
     type: entity_reference_autocomplete
@@ -37,11 +29,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_sum:
-    type: number
-    weight: 121
+  field_name:
+    type: string_textfield
+    weight: 122
     region: content
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   langcode:

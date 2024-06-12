@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.neighborhood_groups.field_company
     - field.field.node.neighborhood_groups.field_neighborhood
     - node.type.neighborhood_groups
   module:
@@ -19,5 +20,6 @@ content:
     weight: 100
     region: content
 hidden:
+  field_company: true
   field_neighborhood: true
   langcode: true

@@ -1,33 +1,33 @@
-uuid: f289a016-b161-40a1-be98-32c153fd11df
+uuid: ab561d38-6034-4210-93a7-ebda5c6bcae5
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.node.neighborhood_groups.field_company
-    - field.field.node.neighborhood_groups.field_neighborhood
-    - node.type.neighborhood_groups
+    - field.field.node.company.field_name
+    - field.field.node.company.field_user
+    - node.type.company
   module:
     - user
-id: node.neighborhood_groups.default
+id: node.company.default
 targetEntityType: node
-bundle: neighborhood_groups
+bundle: company
 mode: default
 content:
-  field_company:
-    type: entity_reference_label
+  field_name:
+    type: string
     label: above
     settings:
-      link: true
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 123
+    weight: 102
     region: content
-  field_neighborhood:
+  field_user:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 101
+    weight: 103
     region: content
   links:
     settings: {  }

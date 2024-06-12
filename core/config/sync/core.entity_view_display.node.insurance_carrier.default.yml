@@ -1,16 +1,16 @@
-uuid: f289a016-b161-40a1-be98-32c153fd11df
+uuid: d9775276-9a44-4476-a9b4-80e67384325a
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.node.neighborhood_groups.field_company
-    - field.field.node.neighborhood_groups.field_neighborhood
-    - node.type.neighborhood_groups
+    - field.field.node.insurance_carrier.field_company
+    - field.field.node.insurance_carrier.field_name
+    - node.type.insurance_carrier
   module:
     - user
-id: node.neighborhood_groups.default
+id: node.insurance_carrier.default
 targetEntityType: node
-bundle: neighborhood_groups
+bundle: insurance_carrier
 mode: default
 content:
   field_company:
@@ -21,13 +21,13 @@ content:
     third_party_settings: {  }
     weight: 123
     region: content
-  field_neighborhood:
-    type: entity_reference_label
+  field_name:
+    type: string
     label: above
     settings:
-      link: true
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 101
+    weight: 102
     region: content
   links:
     settings: {  }
