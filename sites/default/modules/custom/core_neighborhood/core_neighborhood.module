@@ -1,8 +1,9 @@
 <?php
+use \Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_form_alter().
  */
-function core_neighborhood_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function core_neighborhood_form_alter(array &$form, FormStateInterface  $form_state, $form_id) {
   
 }
