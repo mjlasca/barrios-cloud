@@ -1,0 +1,7 @@
+core_neighborhood.proposal_form:
+  path: '/admin/propuestas'
+  defaults:
+    _form: '\Drupal\core_neighborhood\Form\ProposalForm'
+    _title: 'Formulario de propuestas'
+  requirements:
+    _permission: 'access content'

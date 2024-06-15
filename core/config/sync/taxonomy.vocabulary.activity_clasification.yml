@@ -1,0 +1,8 @@
+uuid: d3203446-e5a4-4c61-bfbc-5a2c7d528b18
+langcode: es
+status: true
+dependencies: {  }
+name: Actividades/Clasificaciones
+vid: activity_clasification
+description: 'Asignación de actividades y clasificaciones'
+weight: 0

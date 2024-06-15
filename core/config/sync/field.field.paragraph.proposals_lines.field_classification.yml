@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_classification
-    - node.type.classification
     - paragraphs.paragraphs_type.proposals_lines
+    - taxonomy.vocabulary.activity_clasification
 id: paragraph.proposals_lines.field_classification
 field_name: field_classification
 entity_type: paragraph
@@ -17,13 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      classification: classification
+      activity_clasification: activity_clasification
     sort:
-      field: _none
-      direction: ASC
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

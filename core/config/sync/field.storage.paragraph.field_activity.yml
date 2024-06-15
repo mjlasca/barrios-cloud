@@ -3,14 +3,14 @@ langcode: es
 status: true
 dependencies:
   module:
-    - node
     - paragraphs
+    - taxonomy
 id: paragraph.field_activity
 field_name: field_activity
 entity_type: paragraph
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1
