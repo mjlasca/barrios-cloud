@@ -1,0 +1,6 @@
+proposal_form:
+  js:
+    js/proposalForm.js: {}
+  css:
+    theme:
+      css/proposalForm.css: {}

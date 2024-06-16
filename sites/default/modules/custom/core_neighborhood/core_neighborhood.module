@@ -7,3 +7,12 @@ use \Drupal\Core\Form\FormStateInterface;
 function core_neighborhood_form_alter(array &$form, FormStateInterface  $form_state, $form_id) {
   
 }
+
+
+function core_neighborhood_theme($existing, $type, $theme, $path) {
+    return [
+        'proposal_form' => [
+        'variables' => ['form' => NULL],
+        ],
+    ];
+}

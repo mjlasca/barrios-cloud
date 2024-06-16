@@ -24,7 +24,7 @@ class ProposalForm extends FormBase {
     $currentDatetime = new DrupalDateTime('now', new \DateTimeZone('America/Argentina/Buenos_Aires'));
     $form['custommer_reference'] = [
         '#type' => 'entity_autocomplete',
-        '#title' => $this->t('Cliente'),
+        '#title' => $this->t('Tomador'),
         '#target_type' => 'node',
         '#selection_handler' => 'default',
         '#selection_settings' => [
@@ -63,6 +63,17 @@ class ProposalForm extends FormBase {
         '#type' => 'datetime',
         '#title' => $this->t('Vigencia hasta'),
         '#required' => TRUE,
+    ];
+
+    $form['payment_type_reference'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Tipo de pago'),
+      '#options' => [
+        '' => 'Seleccione una opción',
+        'contado' => 'CONTADO',
+        'credito' => 'CRÉDITO'
+      ],
+      '#required' => TRUE,
     ];
     
     $form['actions']['submit'] = [
