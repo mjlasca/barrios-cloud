@@ -1,0 +1,37 @@
+.form-control .form-item {
+  margin-block: 0;
+}
+.form-control div {
+  margin-block: 0;
+  margin: 0;
+}
+.custommer {
+  display: flex;
+}
+.custommer .custommer-action {
+  margin-top: 10px;
+}
+.proposal-lines {
+  background-color: #eee;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.proposal-lines .proposal-lines__row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+}
+.proposal-lines__row > div {
+  flex: 1 1 auto;
+  min-width: 100px;
+}
+.proposal-lines__row button {
+  margin-top: 0px;
+  width: 40px;
+}
+.hidden {
+  display: none;
+}

@@ -43,26 +43,23 @@ class ProposalForm extends FormBase {
         '#required' => TRUE,
     ];*/
 
-    $options = $this->getTaxonomyTermOptions('tax_situation'); 
+    $options_tax_situation = $this->getTaxonomyTermOptions('tax_situation'); 
 
     $form['tax_situation_reference'] = [
       '#type' => 'select',
       '#title' => $this->t('Situación impositiva'),
-      '#options' => $options,
-      '#required' => TRUE,
+      '#options' => $options_tax_situation,
     ];
     
     $form['field_valid_since'] = [
         '#type' => 'datetime',
         '#title' => $this->t('Vigencia desde'),
-        '#required' => TRUE,
         '#default_value' => $currentDatetime,
     ];
     
     $form['field_validity_until'] = [
         '#type' => 'datetime',
         '#title' => $this->t('Vigencia hasta'),
-        '#required' => TRUE,
     ];
 
     $form['payment_type_reference'] = [
@@ -73,7 +70,33 @@ class ProposalForm extends FormBase {
         'contado' => 'CONTADO',
         'credito' => 'CRÉDITO'
       ],
-      '#required' => TRUE,
+    ];
+
+    $form['document_number'] = [
+      '#type' => 'number',
+      '#empty_option' => $this->t('No. documento'),
+      '#name' => 'document_number[]',
+      '#attributes' => [
+        'placeholder' => 'No. documento'
+      ]
+    ];
+
+    $options_document_type = $this->getTaxonomyTermOptions('document_type'); 
+
+    $form['document_type'] = [
+      '#type' => 'select',
+      '#options' => $options_document_type,
+      '#empty_option' => $this->t('- Tipo doc. -'),
+      '#name' => 'document_type[]',
+    ];
+
+    $options_activity_clasification = $this->getTaxonomyTermOptions('activity_clasification', 0); 
+
+    $form['activity_clasification'] = [
+      '#type' => 'select',
+      '#options' => $options_activity_clasification,
+      '#empty_option' => $this->t('- Actividad -'),
+      '#name' => 'activity_clasification[]',
     ];
     
     $form['actions']['submit'] = [
@@ -88,19 +111,18 @@ class ProposalForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    if (strlen($form_state->getValue('name')) < 5) {
+    /*if (strlen($form_state->getValue('name')) < 5) {
       $form_state->setErrorByName('name', $this->t('Name must be at least 5 characters long.'));
-    }
-
-    if (!\Drupal::service('email.validator')->isValid($form_state->getValue('email'))) {
-      $form_state->setErrorByName('email', $this->t('The email address is not valid.'));
-    }
+    }*/
+    dd($form_state->getValues());
   }
 
   /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    dump($form_state->getValues());
+    exit;
     \Drupal::messenger()->addMessage($this->t('The form has been submitted.'));
   }
 
@@ -113,11 +135,18 @@ class ProposalForm extends FormBase {
    * @return array
    *   An associative array of taxonomy term options.
    */
-  protected function getTaxonomyTermOptions($vocabulary) {
+  protected function getTaxonomyTermOptions($vocabulary, $parent = -1) {
     $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vocabulary);
     $options = [];
-    foreach ($terms as $term) {
-      $options[$term->tid] = $term->name;
+    if($parent != -1){
+        foreach ($terms as $term) {
+          if(isset($term->parents[0]) && $term->parents[0] == $parent)
+            $options[$term->tid] = $term->name;  
+        }
+    }else{
+      foreach ($terms as $term) {
+        $options[$term->tid] = $term->name;
+      }
     }
     return $options;
   }

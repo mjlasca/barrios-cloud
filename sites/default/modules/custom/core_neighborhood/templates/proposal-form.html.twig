@@ -4,12 +4,84 @@
  * Custom proposal form page template.
  */
 #}
-{{ attach_library('core_neighborhood/proposal_form') }}
+
 <div class="form-container">
-  <div class="form-control">
-    {{form['custommer_reference']}}
-    <a href="/node/add/custommer" target="_blank">>>Crear cliente</a>
+<form method="{{form['#method']}}" class="form form--client" id="{{form['#id']}}" enctype="multipart/form-data">
+  <div class="form-control custommer">
+    <div>
+      {{form['custommer_reference']}}
+      <a href="/node/add/custommer" target="_blank">>>Crear cliente</a>
+    </div>
+    <div class="custommer-action">
+      <button type="button" class="button button--primary">Agregar tomador</button>
+    </div>
+  </div>
+  <div class="form-control proposal-lines">
+    <div class="proposal-lines__row">
+      <div>
+        {{form['document_number']}}
+      </div>
+      <div class="row-document-type">
+        {{form['document_type']}}
+      </div>
+      <div>
+        <input class="form-element" type="text" placeholder="Apellidos" name="lastname[]">
+      </div>
+      <div>
+        <input class="form-element" type="text" placeholder="Nombres" name="name[]">
+      </div>
+      <div>
+        <input class="form-element" type="date"  name="birth_date[]">
+      </div>
+      <div>
+        {{form['activity_clasification']}}
+      </div>
+      <div>
+        <select class="form-element" name="clasification[]">
+          <option value="">- Clasificación -</option>
+        </select>
+      </div>
+      <div>
+        <button type="button" class="action-link action-link--danger action-link--icon-trash"></button>
+      </div>
+    </div>
+    <div class="" id="line-base">
+      <div>
+        {{form['document_number']}}
+      </div>
+      <div class="row-document-type">
+        {{form['document_type']}}
+      </div>
+      <div>
+        <input class="form-element" type="text" placeholder="Apellidos" name="lastname[]">
+      </div>
+      <div>
+        <input class="form-element" type="text" placeholder="Nombres" name="name[]">
+      </div>
+      <div>
+        <input class="form-element" type="date"  name="birth_date[]">
+      </div>
+      <div>
+        {{form['activity_clasification']}}
+      </div>
+      <div>
+        <select class="form-element" name="clasification[]">
+          <option value="">- Clasificación -</option>
+        </select>
+      </div>
+      <div>
+        <button type="button" class="action-link action-link--danger action-link--icon-trash remove-row"></button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="button button--primary add-row">Agregar póliza</button>
+  <div>
+  {{form['actions']['submit']}}
   </div>
 
-  
+  {{ form.form_build_id }}
+  {{ form.form_token }}
+  {{ form.form_id }}
+  </form>
 </div>
+{{ attach_library('core_neighborhood/proposal_form') }}
