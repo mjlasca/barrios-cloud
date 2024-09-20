@@ -20,3 +20,33 @@ function addLine() {
 function removeLine(e) {
   e.closest(".proposal-lines__row").remove();
 }
+
+document.querySelector('.proposal-lines').addEventListener('change', function(event) {
+  if (event.target && event.target.matches('select[name="activity_clasification[]"]')) {
+      let selects = document.querySelectorAll('select[name="activity_clasification[]"]');
+      let selectedIndex = Array.from(selects).indexOf(event.target);
+      let correspondingClasification = document.querySelectorAll('select[name="clasification[]"]')[selectedIndex];
+      correspondingClasification.innerHTML = '';
+      const option = document.createElement('option');
+      option.value = '';
+      option.text = '- Clasificación -';
+      correspondingClasification.appendChild(option);
+      if(event.target.value !== ""){
+        fetchclasifications(event.target.value).then(clasifications => {
+            correspondingClasification.appendChild(option);
+            clasifications.forEach(cla => {
+                const option = document.createElement('option');
+                option.value = cla.id;
+                option.text = cla.name;
+                correspondingClasification.appendChild(option);
+            });
+        });
+      }
+  }
+});
+
+function fetchclasifications(clasificacionId) {
+  return fetch('/barrios-cloud/proposal-clasification/' + clasificacionId)
+      .then(response => response.json());
+}
+

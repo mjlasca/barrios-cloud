@@ -1,16 +1,16 @@
-uuid: bbb9a772-ced5-4efe-92c4-645746a48248
+uuid: 9417df74-1c5a-46bc-859b-ad674c45c4f0
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_neighborhood
-    - node.type.neighborhood
+    - field.storage.node.field_neighborhood_group
+    - node.type.neighborhood_groups
     - node.type.proposals
-id: node.proposals.field_neighborhood
-field_name: field_neighborhood
+id: node.proposals.field_neighborhood_group
+field_name: field_neighborhood_group
 entity_type: node
 bundle: proposals
-label: Barrio
+label: 'Grupo de barrios'
 description: ''
 required: false
 translatable: false
@@ -20,10 +20,10 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      neighborhood: neighborhood
+      neighborhood_groups: neighborhood_groups
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: neighborhood
+    auto_create_bundle: ''
 field_type: entity_reference

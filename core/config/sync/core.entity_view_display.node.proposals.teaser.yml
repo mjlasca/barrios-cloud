@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.proposals.field_master
     - field.field.node.proposals.field_months
     - field.field.node.proposals.field_neighborhood
+    - field.field.node.proposals.field_neighborhood_group
     - field.field.node.proposals.field_organizer
     - field.field.node.proposals.field_pay
     - field.field.node.proposals.field_payment_date
@@ -51,6 +52,7 @@ hidden:
   field_master: true
   field_months: true
   field_neighborhood: true
+  field_neighborhood_group: true
   field_organizer: true
   field_pay: true
   field_payment_date: true

@@ -1,8 +1,9 @@
-uuid: 4c854526-cc92-4650-87de-f2666318cbbc
+uuid: 8c93b51e-bfa6-45f0-9dee-0fdd772bab50
 langcode: es
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.node.content_admin
     - field.field.node.proposals.field_company
     - field.field.node.proposals.field_covarage
     - field.field.node.proposals.field_custommer
@@ -31,83 +32,32 @@ dependencies:
     - node.type.proposals
   module:
     - datetime
-    - field_group
     - paragraphs
     - path
-third_party_settings:
-  field_group:
-    group_propuestas:
-      children:
-        - group_datos_tomador
-        - group_vigencia_clausulas_y_cober
-      label: Propuestas
-      region: content
-      parent_name: ''
-      weight: 0
-      format_type: tabs
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        direction: horizontal
-        width_breakpoint: 640
-    group_datos_tomador:
-      children:
-        - field_custommer
-        - field_proposals_lines
-      label: 'Tomador y asegurados'
-      region: content
-      parent_name: group_propuestas
-      weight: 20
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: closed
-        description: ''
-        required_fields: true
-    group_vigencia_clausulas_y_cober:
-      children:
-        - field_valid_since
-        - field_validity_until
-        - field_months
-        - field_covarage
-        - field_tax_situation
-        - field_payment_type
-        - field_neighborhood
-        - field_neighborhood_group
-        - field_prize
-        - field_total_prize
-      label: 'Vigencia, claúsulas y cobertura'
-      region: content
-      parent_name: group_propuestas
-      weight: 22
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: closed
-        description: ''
-        required_fields: true
-id: node.proposals.default
+id: node.proposals.content_admin
 targetEntityType: node
 bundle: proposals
-mode: default
+mode: content_admin
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_company:
+    type: entity_reference_autocomplete
+    weight: 132
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_covarage:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 30
     region: content
     settings:
       match_operator: CONTAINS
@@ -117,23 +67,52 @@ content:
     third_party_settings: {  }
   field_custommer:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_debit_note:
+    type: number
+    weight: 131
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_deductible_coverage:
+    type: number
+    weight: 125
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_expense_coverage:
+    type: number
+    weight: 126
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_master:
+    type: string_textfield
+    weight: 128
+    region: content
+    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_months:
     type: options_select
-    weight: 4
+    weight: 29
     region: content
     settings: {  }
     third_party_settings: {  }
   field_neighborhood:
-    type: entity_reference_autocomplete_tags
-    weight: 8
+    type: entity_reference_autocomplete
+    weight: 121
     region: content
     settings:
       match_operator: CONTAINS
@@ -141,32 +120,68 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_neighborhood_group:
-    type: entity_reference_autocomplete_tags
-    weight: 9
+  field_organizer:
+    type: string_textfield
+    weight: 129
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_payment_type:
-    type: options_select
-    weight: 7
+  field_pay:
+    type: boolean_checkbox
+    weight: 33
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_payment_date:
+    type: datetime_default
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_prize:
-    type: number
-    weight: 10
+  field_payment_type:
+    type: options_select
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_payment_user:
+    type: entity_reference_autocomplete
+    weight: 35
     region: content
     settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_prima:
+    type: number
+    weight: 127
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_prize:
+    type: number
+    weight: 122
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_producer:
+    type: string_textfield
+    weight: 130
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_proposals_lines:
     type: paragraphs
-    weight: 4
+    weight: 8
     region: content
     settings:
       title: Párrafo
@@ -182,9 +197,24 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_reference:
+    type: string_textfield
+    weight: 34
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sum_coverage:
+    type: number
+    weight: 124
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_tax_situation:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 26
     region: content
     settings:
       match_operator: CONTAINS
@@ -194,60 +224,60 @@ content:
     third_party_settings: {  }
   field_total_prize:
     type: number
-    weight: 11
+    weight: 123
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_valid_since:
     type: datetime_default
-    weight: 2
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }
   field_validity_until:
     type: datetime_default
-    weight: 3
+    weight: 28
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 0
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 5
+    weight: 3
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 6
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
@@ -256,17 +286,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  field_company: true
-  field_debit_note: true
-  field_deductible_coverage: true
-  field_expense_coverage: true
-  field_master: true
-  field_organizer: true
-  field_pay: true
-  field_payment_date: true
-  field_payment_user: true
-  field_prima: true
-  field_producer: true
-  field_reference: true
-  field_sum_coverage: true
+  field_neighborhood_group: true
   title: true

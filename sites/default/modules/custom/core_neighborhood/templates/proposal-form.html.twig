@@ -17,35 +17,7 @@
     </div>
   </div>
   <div class="form-control proposal-lines">
-    <div class="proposal-lines__row">
-      <div>
-        {{form['document_number']}}
-      </div>
-      <div class="row-document-type">
-        {{form['document_type']}}
-      </div>
-      <div>
-        <input class="form-element" type="text" placeholder="Apellidos" name="lastname[]">
-      </div>
-      <div>
-        <input class="form-element" type="text" placeholder="Nombres" name="name[]">
-      </div>
-      <div>
-        <input class="form-element" type="date"  name="birth_date[]">
-      </div>
-      <div>
-        {{form['activity_clasification']}}
-      </div>
-      <div>
-        <select class="form-element" name="clasification[]">
-          <option value="">- Clasificación -</option>
-        </select>
-      </div>
-      <div>
-        <button type="button" class="action-link action-link--danger action-link--icon-trash"></button>
-      </div>
-    </div>
-    <div class="" id="line-base">
+    <div class="proposal-lines__row" id="line-base">
       <div>
         {{form['document_number']}}
       </div>

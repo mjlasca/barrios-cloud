@@ -5,3 +5,11 @@ core_neighborhood.proposal_form:
     _title: 'Propuestas'
   requirements:
     _permission: 'access content'
+
+core_neighborhood.get_clasification:
+  path: '/proposal-clasification/{parent}'
+  defaults:
+    _controller: '\Drupal\core_neighborhood\Controller\ProposalController::getClasifications'
+    _title: 'Get clasifications for parent'
+  requirements:
+    _permission: 'access content'

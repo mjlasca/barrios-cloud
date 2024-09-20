@@ -1,0 +1,11 @@
+uuid: dd3e5bd7-9c9e-4fea-b634-e95de0c1ae3d
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.content_admin
+label: 'content admin'
+description: ''
+targetEntityType: node
+cache: true
